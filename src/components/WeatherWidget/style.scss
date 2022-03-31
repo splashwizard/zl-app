@@ -1,0 +1,78 @@
+
+.weatherWidget {
+  background: rgba(18, 39, 23, .9);
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  z-index: 1;
+  width: fit-content;
+}
+
+.weatherWrapper {
+  padding: 8px;
+}
+
+.liveTag {
+  width: 34px;
+  max-height: 18px;
+  border-radius: 5px;
+  background: var(--oliveLight);
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-right: 8px;
+  color: var(--charcoal);
+
+  &.mobile {
+    background: var(--oliveLighter);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: 700;
+
+    > span {
+      line-height: 9px;
+    }
+  }
+}
+
+.weather {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+
+  img {
+    max-width: 20px;
+  }
+}
+
+.schedule {
+  background: #24412B;
+  border-radius: 5px;
+  height: 25px;
+  padding: 4px 9px;
+  align-items: start;
+
+  svg {
+    font-size: .75rem;
+    margin-right: 6px;
+  }
+
+  .underlined {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

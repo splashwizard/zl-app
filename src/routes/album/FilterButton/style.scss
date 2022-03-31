@@ -1,0 +1,98 @@
+.customCheckbox {
+  overflow: auto;
+  margin-right: -19px;
+  max-width: calc(100% + 19px);
+
+  > label {
+    outline: none !important;
+    border-radius: 5px;
+    width: 100%;
+    min-height: max-content;
+
+    div > div {
+      background-color: white;
+      border-color: var(--grey);
+      border-radius: 5px;
+    }
+
+    &:hover {
+
+      div > div {
+        border-color: var(--charcoalLight) !important;
+        background-color: white;
+      }
+    }
+
+    &[checked="true"] {
+
+      div > div {
+        background: var(--blueDark) !important;
+        border-color: var(--blueDark);
+
+        svg {
+          stroke: white !important;
+          color: white !important;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.divider {
+  border-top: 1px solid #EBEBEB;
+  width: calc(100% + (24px * 2));
+  margin: 20px -19px 10px;
+}
+
+.filterBox {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
+  background: white;
+  border-radius: 5px;
+  padding: 19px 19px 11px 19px;
+  overflow: hidden;
+}
+
+.dropdownButton {
+  padding: 8px 8px 8px 14px;
+  border-radius: 100px;
+  border: 1.5px solid var(--grey);
+  outline: none;
+  min-width: 150px;
+  height: 45px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+
+  span {
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--grey);
+  }
+
+  &:hover {
+    box-shadow: none !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &.active {
+    color: #5260DD;
+    border-color: #5260DD;
+
+    svg {
+      stroke: #5260DD;
+    }
+  }
+}
+
+.actionBtn {
+  min-width: 60px;
+  padding: 3px 10px;
+}

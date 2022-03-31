@@ -1,0 +1,134 @@
+.scheduleEventModal {
+  width: 595px;
+  max-width: calc(100vw - 30px);
+  overflow-y: auto;
+}
+
+.form {
+  // this will add more distance to the custom scroll bar
+  margin-right: -20px;
+
+  .wrapper {
+    padding-right: 20px;
+    max-height: calc(80vh - 160px);
+    overflow: auto;
+  }
+
+  :global {
+
+    .customScrollBar::-webkit-scrollbar-thumb {
+      background-color: #E7E7E7;
+      border: 2px solid white;
+    }
+  }
+
+  .label {
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    &.eventType {
+      margin-top: 0;
+    }
+  }
+
+  select:not(.simpleSelect),
+  textarea,
+  input:not([type="checkbox"]):not([type="radio"]) {
+    background: white;
+    border: 2px solid #CDCDCD;
+    border-radius: 4px;
+    height: 36px;
+    color: black;
+    font-weight: 400;
+    padding: 4px 10px;
+
+    &:read-only:not(.dateInput) {
+      border: 0;
+    }
+  }
+
+  .simpleSelect {
+    position: relative;
+    border: 2px solid #CDCDCD;
+    border-radius: 4px;
+    height: 36px;
+
+    select {
+      appearance: none;
+      width: calc(100% - 30px);
+      height: 100%;
+      color: black;
+      font-weight: 400;
+      padding: 4px 10px;
+    }
+  }
+
+  .selectContainer button {
+    border: 2px solid #CDCDCD;
+    border-radius: 0;
+
+    > div {
+      border: 0;
+    }
+
+    input {
+      height: 32px !important;
+    }
+  }
+
+  textarea {
+    height: unset;
+  }
+
+  .frequency {
+    border-right: 1px solid #EBEBEB;
+    padding: 5px 20px 5px 0;
+    margin-right: 30px;
+    min-width: 175px;
+  }
+}
+
+.error {
+  display: none;
+  position: absolute;
+  top: 100%;
+  color: var(--red);
+}
+
+.inputWrapper {
+  position: relative;
+
+  input[type="email"]:invalid:not(:focus) {
+
+    + .error {
+      display: block;
+    }
+  }
+
+  input.letterCount {
+    padding-right: 45px;
+  }
+  
+  .letterLabel {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+.formSubmissionError {
+  margin-top: 20px;
+  color: var(--red);
+  font-size: 13px;
+}
+
+:global {
+
+  // Calendar picker should automatically do the calculations to be shown from top or bottom
+  // but its not working as intended so this is a fallback to make the calendar picker autoscroll
+  // when using small screens
+
+  [class*="StyledDrop"] > [class^="StyledCalendar"] {
+    overflow-y: auto;
+  }
+}

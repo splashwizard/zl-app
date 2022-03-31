@@ -1,0 +1,42 @@
+@import "../../../style/media-query.scss";
+
+.contactUs {
+  color: white;
+  text-decoration: underline;
+
+  &:hover {
+    color: white !important;
+  }
+}
+
+.fallbackMessage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: auto;
+  background: linear-gradient(90deg, rgb(248, 184, 208) 0%, 27.5556%, rgb(130, 126, 168) 55.1111%, 77.5556%, rgb(123, 139, 198) 100%);
+}
+
+.learnText {
+  margin-top: 40px;
+
+  @media screen and (max-width: #{$phone-portrait-width}) {
+    margin-top: 5px;
+  }
+}
+
+.SendButton {
+  padding: 10px;
+  margin-left: 10px;
+  color: black;
+  background: white;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  height: 34px;
+  cursor: pointer;
+}

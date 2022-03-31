@@ -1,0 +1,102 @@
+.inputBox {
+  display: flex;
+  background-color: var(--hunterGreenMediumLight);
+  padding: 10px;
+  min-height: max-content;
+  position: relative;
+  flex-direction: column;
+
+  &.alternate {
+    background: unset;
+
+    .inputContainer .inputWrapper {
+      border-radius: 100px;
+      width: 100%;
+      overflow: hidden;
+      padding-right: 30px;
+      background: #EBEBEB;
+    }
+
+    * {
+      color: #2E2D2D !important
+    }
+
+    .SendButton {
+      background: #9BB7F1;
+    }
+  }
+
+  &.replyMessage:not(.alternate) {
+    background: var(--hunterGreen);
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+
+    .inputWrapper {
+      border-radius: 100px;
+      width: 100%;
+      overflow: hidden;
+      padding-right: 32px;
+      background: white;
+    }
+
+    input {
+      font-size: 14px;
+      border: 0;
+      outline: none;
+      padding: 8px 0 9px 10px;
+      width: 100%;
+      background: transparent;
+      height: 34px;
+
+      &::placeholder {
+        color: var(--grey);
+      }
+    }
+
+  }
+}
+
+.SendButton {
+  padding: 10px;
+  margin-left: 10px;
+  color: black;
+  background: white;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  height: 34px;
+  cursor: pointer;
+}
+
+.replyMessageContainer {
+  position: relative;
+  border-radius: 5px;
+  color: white;
+
+  .close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 14px;
+    color: inherit;
+  }
+
+  .header {
+    margin-bottom: 10px;
+
+    span {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}

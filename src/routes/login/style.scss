@@ -1,0 +1,165 @@
+@import "../../style/media-query.scss";
+
+.login {
+  display: flex;
+  flex-grow: 1;
+}
+
+.image {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+
+  img {
+    max-width: 50%;
+  }
+}
+
+.formWrapper {
+  position: relative;
+  z-index: 2;
+  width: 500px;
+  padding: 0 20px;
+  background: white;
+  border-radius: 15px;
+  height: fit-content;
+  margin: auto;
+
+  h1 img {
+    width: 200px;
+    margin-left: 12px;
+  }
+}
+
+.inputContainer {
+
+  .label {
+    font-size: 13px;
+    font-weight: 400;
+    color: #444444;
+  }
+
+  .inputWrapper {
+    position: relative;
+    max-width: 450px;
+    min-width: 250px;
+
+    button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: transparent;
+      border: 0;
+      color: var(--grey);
+      font-size: 22px;
+      width: 40px;
+      padding: 0;
+    }
+  }
+
+  input {
+    width: 100%;
+    border-width: 0 0 2px 0;
+    border-radius: 0;
+    border-color: #c3d9da;
+    color: var(--grey);
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: inherit;
+
+    &:focus {
+      border-color: #368185;
+      color: var(--charcoal);
+    }
+
+    &.errorBorder {
+      border-color: var(--red);
+    }
+  }
+}
+
+.errorSection {
+  font-size: 12px;
+  min-height: 24px;
+  width: 100%;
+  text-align: left;
+
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  &.active {
+    color: var(--red);
+  }
+}
+
+.reset {
+  background: unset;
+  border: 0;
+  color: #2F64B8;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  user-select: none;
+
+  span {
+    padding: 0 10px;
+    color: var(--lightGrey);
+  }
+
+  hr {
+    height: 1px;
+    flex-grow: 1;
+    border: 0;
+    background: var(--lightGrey)
+  }
+}
+
+.socialLogin {
+  display: flex;
+
+  a:nth-child(2) {
+    margin: 0 0 20px auto;
+  }
+}
+
+.navigationContainer {
+  display: none;
+
+  a {
+    text-decoration: none;
+    color: var(--blue);
+  }
+}
+
+.topNavigationContainer {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+
+  @media screen and (min-width: #{$max-width}) {
+    right: calc(50vw - (var(--maxWidth) / 2) + 46px);
+  }
+}
+
+@media screen and (max-width: #{$tablet-portrait-width}) {
+  
+  .navigationContainer {
+    display: block;
+    text-align: center;
+  }
+
+  .topNavigationContainer {
+    display: none;
+  }
+}

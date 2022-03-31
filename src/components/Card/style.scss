@@ -1,0 +1,204 @@
+$cardWidth: 240px;
+
+.card {
+  display: block;
+  width: $cardWidth;
+  min-height: 140px;
+  height: min-content;
+  margin: auto;
+
+  .wrapper {
+    width: $cardWidth;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    padding: 18px 13px 18px 15px;
+    min-height: 140px;
+  }
+
+  .left {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    max-width: calc(100% - 80px);
+  }
+
+  .right {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    button {
+      padding: 8px 8px;
+      white-space: nowrap;
+      margin-top: 14px;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .header {
+    font-size: 10px;
+    line-height: 10px;
+    color: var(--grey);
+    font-weight: bold;
+    letter-spacing: .5px;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 13px;
+    line-height: 18px;
+    flex-grow: 1;
+  }
+
+  .description {
+    font-size: 10px;
+    line-height: 16px;
+    color: var(--charcoalLight);
+    margin-top: auto;
+    padding-right: 6px;
+  }
+}
+
+.loading {
+
+  button {
+    opacity: 0;
+  }
+
+  .header {
+    height: 12px;
+    width: 102px;
+    color: transparent !important;
+  }
+
+  .title {
+    max-height: 12px;
+    width: 124px;
+    color: transparent !important;
+  }
+
+  .description {
+    height: 12px;
+    position: relative;
+    width: 124px;
+    color: transparent !important;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      background: inherit;
+      border-radius: inherit;
+      right: 0;
+      left: 0;
+      height: 12px;
+      width: 124px;
+    }
+  }
+
+  button {
+    color: transparent !important;
+    border: 0 !important;
+    cursor: default !important;
+    pointer-events: none;
+  }
+}
+
+.tablet {
+  width: fit-content !important;
+  height: fit-content !important;
+  min-height: fit-content !important;
+  position: absolute !important;
+  bottom: 10px;
+  right: 2.5%;
+}
+
+.phone {
+  width: fit-content !important;
+  height: fit-content !important;
+  min-height: fit-content !important;
+  position: absolute !important;
+  // 55px from the zoom bar + 10px padding for regular control buttons
+  bottom: 65px;
+  right: 2.5%;
+}
+
+.liveTalk {
+  border-radius: 5px;
+  overflow: hidden;
+  object-fit: cover;
+  top: 4px;
+  right: 5px;
+  z-index: 4;
+  margin: 0px;
+  position: absolute;
+
+  &.tablet,
+  &.mobile {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .bottomSection {
+    position: absolute;
+    padding: 5px 15px;
+    background-color: var(--hunterGreenMediumLight);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    bottom: 0;
+    top: unset;
+    right: 0;
+    left: 0;
+    transform: none;
+    text-align: center;
+    color: white;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  video::-webkit-media-controls-timeline {
+    display: none;
+  }
+}
+
+.videoCard {
+  width: 240px;
+  height: 140px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  video {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+.lockButton {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  svg {
+    font-size: 9px !important;
+    margin-right: 5px;
+  }
+
+  .buttonText {
+    color: #2E2D2D;
+  }
+}

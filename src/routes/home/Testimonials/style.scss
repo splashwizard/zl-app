@@ -1,0 +1,145 @@
+@import "../../../style/media-query";
+
+.testimonial {
+  padding: 20px;
+  background: white;
+  max-width: 256px;
+  margin: auto;
+
+  .quote {
+    width: 22px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+
+    img {
+      height: 42px;
+      margin-right: 15px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.carousel {
+  max-width: 1174px;
+  margin: 40px auto 40px;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.testimonials {
+  background-image: url("https://assets.zoolife.tv/landing/s6_background.jpg");
+  background-size: cover;
+  padding-top: 100px;
+
+  > h2 {
+    text-align: center;
+    padding: 0 40px;
+  }
+}
+
+.missionContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  .mission {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding-left: 200px;
+
+    .wrapper {
+      max-width: 520px;
+    }
+  }
+
+  h1 {
+    margin: 20px 0 10px;
+  }
+
+  p,
+  h6 {
+    margin: 0;
+  }
+
+  button {
+    margin: 50px 0 100px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mountain {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.dots {
+  @media screen and (min-width: 1080px) {
+    display: none;
+  }
+
+  :global {
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 27px;
+
+      &:not(.react-multi-carousel-dot--active) {
+        opacity: .5;
+      }
+
+      button {
+        border: 0;
+        background-color: white;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-landscape-width) {
+
+  .missionContainer .mission {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 715px) {
+
+  .missionContainer {
+    flex-direction: column;
+
+    button {
+      margin: 50px 0 0 0;
+    }
+
+    .mountain {
+      position: initial;
+      padding-left: 20px;
+    }
+  }
+}
+
+:global {
+
+  .react-multiple-carousel__arrow {
+    z-index: 1;
+  }
+}

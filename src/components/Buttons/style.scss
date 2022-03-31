@@ -1,0 +1,157 @@
+@import "../../style/media-query";
+
+
+button {
+  line-height: initial;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.loading {
+  pointer-events: none;
+}
+
+.large {
+  min-width: 160px;
+  min-height: 45px;
+  font-size: 16px !important;
+  line-height: 18.4px;
+}
+
+.medium {
+  min-width: 130px;
+  min-height: 30px;
+}
+
+.small {
+  min-width: 60px;
+  min-height: 25px;
+  font-size: 12px !important;
+  line-height: 17.27px;
+}
+
+.outline {
+  background-color: transparent !important;
+}
+
+.landingPrimary,
+.landingSecondary,
+.floatingButton {
+  color: var(--hunterGreenDark);
+  padding: 20px 40px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 0;
+  width: fit-content;
+  cursor: pointer;
+  white-space: nowrap;
+
+  @media screen and (max-width: #{$tablet-portrait-width}) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.landingPrimary {
+  background-color: var(--blueMediumLight);
+
+  &:hover {
+    background-color: var(--blueLight);
+  }
+}
+
+.landingSecondary {
+  color: white;
+  background-color: var(--hunterGreen);
+
+  &:hover {
+    background-color: var(--hunterGreenMediumLight);
+  }
+}
+
+.floatingButton {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  background: var(--lavenderGradient);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
+  font-size: 18px;
+  line-height: 18px;
+  padding: 18px 22px;
+  font-weight: bold;
+  z-index: 3;
+  width: auto;
+  opacity: 0;
+  transform: translateX(200%);
+  transition: transform 1.2s, max-height 1s, margin 1s, opacity 1s;
+
+  @media screen and (min-width: #{$max-width}) {
+    right: calc(50vw - (var(--maxWidth) / 2) + 60px);
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:hover {
+    opacity: 1;
+    color: var(--charcoalLight);
+  }
+
+  &:active,
+  &:focus {
+    opacity: 1;
+    color: rgba(83, 83, 83, .8);
+  }
+
+  .wrapper {
+    position: relative;
+    white-space: nowrap;
+
+    span:before {
+      font-size: inherit;
+      line-height: inherit;
+      content: "Start Free Trial";
+      margin-right: 18px;
+      vertical-align: middle;
+    }
+
+    svg {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: #{$tablet-portrait-width}) {
+
+  .floatingButton {
+    min-width: 340px;
+    padding: 27px 34px;
+    font-size: 20px;
+    line-height: 30px;
+
+    .wrapper {
+
+      span:before {
+        content: "Start Free Trial";
+      }
+
+      svg {
+        font-size: 25px;
+      }
+    }
+  }
+}

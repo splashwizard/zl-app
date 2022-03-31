@@ -1,0 +1,42 @@
+$img-size: 150px;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.img {
+  margin-top: 10px;
+  width: $img-size;
+  height: $img-size;
+  border-radius: 100%;
+  border: 7px solid var(--mossMedium);
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.mobile .wrapper {
+
+  img {
+    width: 180px;
+    height: 180px;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  li span {
+    font-size: 15px;
+  }
+}

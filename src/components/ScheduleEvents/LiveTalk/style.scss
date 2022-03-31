@@ -1,0 +1,137 @@
+.scheduleItem {
+  background: white;
+  border-radius: 10px;
+  min-height: 300px;
+  position: relative;
+  max-width: unquote("min(100%, 980px)");
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+
+  a {
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .header {
+    position: relative;
+    padding: 26px 40px;
+    background: var(--oliveMedium);
+    min-height: max-content;
+
+    .imageWrapper {
+      padding-right: 45px;
+      position: relative;
+      height: fit-content;
+      cursor: pointer;
+
+      .logo {
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .15);
+        background-color: white;
+        top: 50%;
+        right: 0;
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .textWrapper {
+      flex-grow: 1;
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    padding: 52px 40px;
+    min-height: max-content;
+    position: relative;
+
+    .date {
+      margin: 14px 0 10px 0
+    }
+
+    [class^="editBtn"] {
+      transform: none;
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.externalLinkIcon {
+  color: var(--blueDark);
+  font-size: 20px;
+  padding-left: 4px;
+}
+
+.sessionButton {
+  height: 45px;
+  font-size: 14px;
+  font-weight: 800;
+  min-width: 120px;
+  max-width: 120px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.textBox {
+  word-break: break-word;
+  white-space: break-spaces;
+  margin-bottom: 20px;
+}
+
+.mobile {
+  padding: 8px;
+  width: 100%;
+
+  [class^="habitatCard"] {
+    width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.lockButtonMobile svg {
+  margin-right: 5px;
+}
+
+.lockButton {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  span {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+
+  svg {
+    font-size: 12px !important;
+    margin-right: 5px;
+  }
+
+  .buttonText {
+    color: #2E2D2D;
+  }
+}

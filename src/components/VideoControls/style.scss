@@ -1,0 +1,150 @@
+@import "../../style/media-query";
+
+.videoControls {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding: 0 10px 10px 10px;
+  z-index: 2;
+  width: 100%;
+}
+
+
+
+.timelineWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+
+  .timeStats {
+    display: flex;
+    min-width: fit-content;
+  }
+
+  .seekBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    > div {
+      flex-grow: 1;
+    }
+
+    .rangeInput {
+      padding: 0px 5px;
+
+
+      input {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$tablet-portrait-width}) {
+
+  .videoControls {
+    align-items: flex-end;
+  }
+
+  .timelineWrapper {
+    flex-direction: column-reverse;
+
+    .seekBar {
+      width: 100%;
+
+      input {
+        margin: 0px 2px;
+      }
+    }
+
+    .timeStats {
+      align-self: flex-end;
+
+      span {
+        font-size: 14px;
+        line-height: 10px;
+      }
+    }
+  }
+}
+
+.volumeWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 28px;
+  transition: width .25s ease-in-out;
+  align-items: flex-start;
+
+  button {
+    min-width: 28px;
+  }
+
+
+  .volumeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hunterGreenMediumDark);
+    height: 28px;
+    transition: width .25s ease-in-out;
+    opacity: 0;
+
+    &.expanded {
+      animation: fadeIn .25s ease-in-out forwards;
+    }
+  }
+
+  .rangeInput {
+    padding: 0px 5px;
+
+
+    input {
+      box-shadow: none;
+      width: 0px;
+    }
+  }
+
+  &.expanded {
+    border-left: 0px;
+    width: 100px;
+
+    button {
+      animation: adjustBorder .25s linear forwards;
+
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+
+    .volumeContainer {
+      border-top-right-radius: 14px;
+      border-bottom-right-radius: 14px;
+    }
+
+    .rangeInput input {
+      width: 60px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes adjustBorder {
+
+  100% {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}

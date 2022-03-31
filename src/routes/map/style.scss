@@ -1,0 +1,59 @@
+@import "../../style/media-query";
+
+.bottomImage {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+}
+
+.headerImage {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.background {
+  background: linear-gradient(180deg, #FFD1AF 27.08%, #FFDCEE 100%);
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  min-height: fit-content;
+}
+
+.map {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    position: relative;
+  }
+
+}
+
+
+.settingContainer {
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  right: 0;
+
+  > div {
+    margin-top: 15px;
+    align-self: flex-end;
+    width: 170px;
+  }
+}
+
+.divider::after {
+  content: "";
+  border-left: 1px solid #EBEBEB;
+  height: 100%;
+}

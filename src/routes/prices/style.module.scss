@@ -1,0 +1,22 @@
+@import "../../style/media-query";
+
+.pricesPage {
+  padding-top: var(--headerHeight);
+}
+
+.content {
+  position: relative;
+  overflow-y: auto;
+  min-height: calc(100vh - var(--headerHeight));
+  max-width: var(--maxWidth);
+  margin: auto;
+
+  @media screen and (min-width: #{$tablet-portrait-width}) {
+    height: calc(100vh - var(--headerHeight));
+    max-height: calc(100vh - var(--headerHeight));
+  }
+
+  * {
+    z-index: 2;
+  }
+}

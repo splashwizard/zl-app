@@ -1,0 +1,42 @@
+$img-size: 140px;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.top {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bottom {
+  flex: 3;
+  justify-content: start;
+}
+
+.mobile .wrapper {
+
+  .top {
+    width: 100%;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: 16px;
+  }
+}

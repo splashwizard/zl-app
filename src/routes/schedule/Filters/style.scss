@@ -1,0 +1,166 @@
+.customCheckbox {
+  overflow: auto;
+  margin-right: -19px;
+  max-width: calc(100% + 19px);
+
+  > label {
+    outline: none !important;
+    border-radius: 5px;
+    width: 100%;
+    min-height: max-content;
+
+    div > div {
+      background-color: white;
+      border-color: var(--grey);
+      border-radius: 5px;
+    }
+
+    &:hover {
+
+      div > div {
+        border-color: var(--charcoalLight) !important;
+        background-color: white;
+      }
+    }
+
+    &[checked="true"] {
+
+      div > div {
+        background: var(--blueDark) !important;
+        border-color: var(--blueDark);
+
+        svg {
+          stroke: white !important;
+          color: white !important;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.divider {
+  border-top: 1px solid #EBEBEB;
+  width: calc(100% + (19px * 2));
+  margin: 20px -19px 10px;
+}
+
+.filterBox {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
+  background: white;
+  border-radius: 5px;
+  padding: 19px 19px 11px 19px;
+  max-width: 227px;
+}
+
+.calendarFilterBox {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
+  border-radius: 5px;
+  padding: 24px;
+  min-width: fit-content;
+
+  h3 {
+    color: var(--charcoalLight);
+  }
+
+  [class^="StyledCalendar__StyledDayContainer"] button {
+    border-radius: 50px;
+
+    &:hover > div {
+      background: var(--lightGrey);
+    }
+  }
+
+  button[class^="StyledButton"] svg {
+    stroke: var(--charcoalLight);
+  }
+}
+
+.dropdownButton {
+  padding: 8px 8px 8px 14px;
+  border-radius: 100px;
+  border: 1.5px solid #757575;
+  outline: none;
+  min-width: 160px;
+  height: 45px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+
+  span {
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--grey);
+
+    + div {
+      width: 4px;
+    }
+  }
+
+  svg {
+    stroke: var(--grey);
+  }
+
+  &:hover {
+    box-shadow: none !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &.active {
+    border-color: #5260DD;
+
+    span {
+      color: #5260DD;
+    }
+
+    svg {
+      stroke: #5260DD;
+    }
+  }
+}
+
+.calendarButton {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+  border-radius: 100px;
+  min-width: 160px;
+  max-width: 160px;
+  height: 45px;
+  overflow: hidden;
+  margin-right: 12px;
+
+  button {
+    border-radius: unset;
+    border: unset;
+    padding: 10px 8px;
+    color: var(--grey);
+
+    &.dateButton {
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  &.active button {
+    border-color: unset;
+    color: #5260DD;
+
+    svg {
+      stroke: #5260DD;
+    }
+  }
+}

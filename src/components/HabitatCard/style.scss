@@ -1,0 +1,126 @@
+.habitatCard {
+  min-width: 310px;
+  min-height: 340px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .25);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  min-height: 102px;
+  max-height: 102px;
+
+  &.fallback {
+    background: #5B8EF6;
+
+    .logo img {
+      width: 54px;
+      border-radius: 0;
+    }
+  }
+
+  .wideImage img {
+    height: 102px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+}
+
+.lockButton {
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  min-width: 126px;
+
+  svg {
+    font-size: 16px !important;
+    margin-right: 5px;
+  }
+
+  .buttonText {
+    color: #2E2D2D;
+    font-size: 16px;
+  }
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  transform: translateY(50%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .15);
+  background-color: white;
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  padding: 20px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a>button {
+    width: 126px;
+    height: 45px;
+  }
+
+  svg {
+    font-size: 20px;
+    min-width: 20px;
+  }
+
+  .iconButton {
+    border-radius: 0;
+  }
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+// for more than 4 line shows ellipses in supported browsers
+// and hides in rest of them.
+.description {
+  display: -webkit-box;
+  height: 88px;
+  line-height: 22px;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,145 @@
+@import "../../../style/media-query";
+
+.overview {
+  max-width: 100%;
+  background-color: var(--hunterGreen);
+  color: white;
+  padding: 100px 0 40px 0;
+}
+
+.perksList {
+  padding-inline-start: 1em;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: row;
+  padding: 0 60px;
+}
+
+.left {
+  width: 50%;
+  height: auto;
+
+  video {
+    width: 100%;
+    max-height: 450px;
+  }
+}
+
+.right {
+  width: 50%;
+}
+
+.description {
+  max-width: 480px;
+  padding-left: 50px;
+  margin: auto;
+
+  .streamingLive {
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    font-size: 20px;
+    line-height: 30px;
+    display: inline-flex;
+    padding: 15px 24px;
+    align-items: center;
+    margin-bottom: 30px;
+
+    svg {
+      font-size: 8px;
+      margin-right: 8px;
+    }
+  }
+
+  ul li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.bottomSection {
+  max-width: 1018px;
+  margin: auto;
+  position: relative;
+  padding-bottom: 40px;
+  margin-top: 80px;
+
+  ul {
+    padding: 10px 30px;
+
+    li:last-child {
+      width: fit-content !important;
+    }
+  }
+
+  .item {
+    min-width: 275px;
+    min-height: 275px;
+    max-width: 306px;
+    max-height: 306px;
+    background: var(--lavenderGradient);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 42px;
+
+
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      color: #000000;
+    }
+
+    img {
+      width: 125px;
+      border-radius: 50%;
+    }
+  }
+
+  .dots {
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+
+    :global {
+
+      li {
+        display: flex;
+        align-items: center;
+        height: 27px;
+
+        &:not(.react-multi-carousel-dot--active) {
+          opacity: .5;
+        }
+
+        button {
+          border: 0;
+          background-color: white;
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$tablet-portrait-width}) {
+
+  .topSection {
+    flex-direction: column;
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .description {
+      margin-top: 75px;
+      padding-left: unset;
+    }
+  }
+}

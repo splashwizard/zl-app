@@ -1,0 +1,44 @@
+
+:global(.fullscreen) {
+
+  :local(.chat) {
+    background: black;
+    width: 0px;
+    position: absolute;
+    margin: auto;
+    z-index: -1;
+  }
+}
+
+.chat {
+  background-color: var(--hunterGreenMediumLight);
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+
+  video:fullscreen {
+    display: block;
+  }
+}
+
+.chatNavigator {
+  padding: 0 15px;
+  height: 36px;
+  font-size: 13px;
+  line-height: 36px;
+  color: white;
+  display: flex;
+
+  > span:first-child {
+    margin-right: auto;
+  }
+}
+
+.nextBtn {
+  display: flex;
+  align-items: center;
+
+  &[disabled] {
+    opacity: .3;
+  }
+}

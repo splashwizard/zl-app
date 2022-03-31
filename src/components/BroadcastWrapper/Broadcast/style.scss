@@ -1,0 +1,90 @@
+.wrapper {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  z-index: 4;
+}
+
+.contactUs {
+  font-size: 14px;
+}
+
+.controls {
+
+  .title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: var(--grey);
+  }
+
+  svg {
+    color: var(--grey);
+  }
+
+  > div {
+    padding: 22px;
+  }
+
+  select {
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    max-width: 161px;
+    flex-grow: 1;
+    border: 2px solid var(--mediumGrey);
+    color: var(--grey);
+    background: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  button {
+    min-width: unset;
+    display: flex;
+    align-items: center;
+
+    &.online,
+    &.online:hover {
+      background: var(--red) !important;
+      color: white;
+    }
+
+    &.offline {
+      background: var(--blueMediumLight);
+    }
+
+    &:disabled {
+      background: var(--lightGrey);
+    }
+  }
+}
+
+.controlContainer {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  z-index: 3;
+
+  .online {
+    background: var(--red) !important;
+  }
+
+  .offline {
+    background: var(--hunterGreen);
+  }
+}
+
+.fallbackContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  background: black;
+  object-fit: cover;
+}

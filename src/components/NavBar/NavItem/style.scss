@@ -1,0 +1,45 @@
+@import "../../../style/media-query";
+
+
+.navItem {
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  @media screen and (max-width: #{$phone-portrait-width} - 1) {
+
+    a {
+      padding: 0 !important;
+    }
+
+    span {
+      display: none;
+      padding: 10px 0px;
+    }
+  }
+
+
+  a {
+    color: var(--grey);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 12px;
+    min-width: 50px;
+    text-decoration: unset;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    font-size: inherit;
+
+    svg {
+      margin-right: 6px;
+    }
+  }
+
+  a:hover {
+    color: var(--charcoal);
+  }
+}

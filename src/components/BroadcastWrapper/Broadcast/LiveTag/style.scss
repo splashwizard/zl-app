@@ -1,0 +1,14 @@
+.liveTagContainer {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  z-index: 3;
+  border-radius: 10px;
+}
+
+.bullet {
+  background: white;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}

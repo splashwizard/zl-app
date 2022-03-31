@@ -1,0 +1,65 @@
+@import "../../style/media-query.scss";
+
+.page {
+  height: calc((var(--vh) * 100) - var(--headerHeight));
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: white;
+}
+
+:global(.fullscreen) {
+
+  :local(.topSection) {
+    width: fit-content;
+    min-height: 100vh;
+    background: black;
+  }
+}
+
+.topSection {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  min-height: fit-content;
+}
+
+:global(.fullscreen) {
+
+  :local(.contentSection) {
+    display: none !important;
+  }
+}
+
+.middleSection {
+  padding: 12px 0 12px 40px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  min-height: fit-content;
+  align-items: flex-start;
+
+  @media screen and (max-width: #{$tablet-portrait-width}) {
+    flex-direction: column;
+  }
+}
+
+.bottomSection {
+  padding: 0 40px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.livestreamWrapper {
+  position: relative;
+  height: fit-content;
+}
+
+@media screen and (max-width: #{$tablet-portrait-width}) {
+
+  .middleSection,
+  .bottomSection {
+    padding: 12px;
+  }
+}

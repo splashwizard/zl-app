@@ -1,0 +1,20 @@
+.takeSnapshotContainer {
+
+  button svg {
+    transform: translateX(-50%) translateY(calc(-50% - 1px));
+    font-size: 18px;
+  }
+}
+
+.tryAgain {
+  color: white;
+  border-radius: 7px;
+  padding: 12px;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.mobileButton {
+  border-radius: 0;
+}

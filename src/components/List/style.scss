@@ -1,0 +1,62 @@
+@import "../../style/media-query.scss";
+
+$arrowMargin: 10px;
+
+.wrapper {
+  padding: 0 $arrowMargin;
+  margin: 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.items {
+  overflow-x: hidden;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+}
+
+.hidden > * {
+  opacity: 0;
+}
+
+.stretch {
+  justify-content: space-around;
+}
+
+.scroll {
+  justify-content: flex-start;
+}
+
+.arrowWrapper {
+  user-select: none;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.arrowLeft {
+  margin-right: $arrowMargin;
+
+  @media screen and (max-width: #{$tablet-portrait-width - 1}) {
+    margin-right: 0;
+  }
+}
+
+.arrowRight {
+  margin-left: $arrowMargin;
+
+  @media screen and (max-width: #{$tablet-portrait-width - 1}) {
+    margin-left: 0;
+  }
+}
+
+.arrowDisabled {
+  pointer-events: none;
+  color: var(--grey);
+}

@@ -1,0 +1,48 @@
+@import "../../style/media-query";
+
+:global(.fullscreen) {
+
+  :local(.streamContainer) {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    video {
+      width: 100vw !important;
+      height: auto !important;
+    }
+
+  }
+}
+
+.streamContainer {
+  flex-grow: 1;
+  position: relative;
+}
+
+.loading video::-webkit-media-controls {
+  visibility: hidden;
+}
+
+.videoContainer {
+  position: relative;
+
+  > div {
+    display: flex;
+  }
+
+  video {
+    object-fit: cover;
+  }
+}
+
+.timeBar {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: auto;
+  z-index: 5 !important;
+  opacity: .9;
+}

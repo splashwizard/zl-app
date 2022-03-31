@@ -1,0 +1,159 @@
+.chatMessageContainer {
+  display: flex;
+  color: white;
+  padding: 5px 10px;
+  min-height: max-content;
+  flex-direction: column;
+
+
+  &.alternate.selected,
+  &.alternate:hover {
+    background: #EBEBEB;
+  }
+
+  &.selected,
+  &:hover {
+    background: #24412B;
+
+    .actionBar {
+      display: flex !important;
+    }
+  }
+
+  .replyMessageHeader {
+    display: flex;
+    flex-direction: row;
+    margin-left: 34px;
+    position: relative;
+    align-items: center;
+
+    > *:first-child > * {
+      width: 13px;
+      height: 13px;
+    }
+
+    span {
+      font-size: 8px;
+      line-height: 16px;
+      margin: 0 5px;
+    }
+
+    a {
+      margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 8px;
+      line-height: 16px;
+      white-space: nowrap;
+      color: white;
+      text-decoration: none;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -22px;
+      top: 7px;
+      border-top: 1px solid #FFFFFF;
+      border-left: 1px solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 5px 0 0 0;
+      width: 18px;
+      height: 7px;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.mediaContainer {
+  margin: 5px 0px;
+  position: relative;
+
+  .imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+}
+
+.messageWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 10px;
+  word-break: break-all;
+  min-height: max-content;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.message {
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.messageTime {
+  font-size: 10px;
+  line-height: 16px;
+  color: white;
+  margin-left: 4px;
+  flex-grow: 1;
+  min-width: 50px;
+}
+
+.actionBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+
+  &.hide {
+    display: none;
+  }
+}
+
+.actionButton {
+  color: #2E2D2D;
+  background: white;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 4px;
+  text-align: right;
+  cursor: pointer;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 25px;
+  max-height: 25px;
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, .07));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.userBadgesContainer {
+  margin: 0px 6px 0px 10px;
+  display: flex;
+  flex-direction: row;
+}

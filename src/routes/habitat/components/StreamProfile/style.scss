@@ -1,0 +1,19 @@
+@import "../../../../style/media-query.scss";
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+
+  @media screen and (max-width: #{$tablet-portrait-width}) {
+    width: 100%;
+  }
+}
+
+.error {
+  /* We need to update this when design team have them ready */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--red);
+}

@@ -1,0 +1,118 @@
+.habitatImage {
+  max-width: 50px;
+  max-height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  border: 4px solid #C1E000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &.freemium {
+    border-color: var(--pink) !important;
+  }
+
+  &.disabled {
+    border-color: var(--charcoalLight);
+
+    img {
+      opacity: .8;
+    }
+  }
+
+  &.offline:not(.freemium) {
+    border-color: #3B499C;
+
+    .lock {
+      background-color: var(--purple);
+      color: white;
+    }
+
+    img {
+      opacity: .8;
+    }
+  }
+
+  img {
+    max-width: 42px;
+    max-height: 42px;
+    border-radius: 50%;
+  }
+
+  .freemiumTag {
+    position: absolute;
+    bottom: 0;
+    transform: translate3d(0, 75%, 0);
+
+    .lock {
+      min-width: 16px;
+      max-width: 16px;
+      min-height: 16px;
+      max-height: 16px;
+      background-color: var(--oliveLight);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 9px;
+      border-radius: 50%;
+    }
+
+    .freeHabitat {
+      width: 41px;
+      height: 16px;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 16px;
+      background-color: var(--pink);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      padding: 2px;
+    }
+  }
+}
+
+.zooLogo {
+  height: 26px;
+  width: auto;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+div.accordion {
+  box-shadow: unset;
+
+  > button {
+    padding: 0px !important;
+
+    svg {
+      right: 0px !important;
+      width: 10px !important;
+    }
+  }
+
+  >div {
+    border: unset !important;
+  }
+}
+
+.lockButton {
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  min-width: 126px;
+
+  svg {
+    font-size: 16px !important;
+    margin-right: 5px;
+  }
+
+  .buttonText {
+    color: #2E2D2D;
+    font-size: 16px;
+  }
+}

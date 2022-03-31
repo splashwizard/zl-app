@@ -1,0 +1,54 @@
+$cardWidth: 255px;
+
+.card {
+  display: block;
+  min-width: $cardWidth;
+  width: $cardWidth;
+  min-height: 70px;
+  height: min-content;
+  cursor: pointer;
+
+  .wrapper {
+    width: $cardWidth;
+    background-color: white;
+    border-radius: 5px;
+    min-height: 70px;
+    padding: 10px;
+  }
+
+  .zooName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15px;
+    position: relative;
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+      border-radius: 50%;
+      width: fit-content;
+    }
+
+    .liveTag {
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

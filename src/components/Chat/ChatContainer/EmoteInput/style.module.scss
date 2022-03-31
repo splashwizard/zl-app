@@ -1,0 +1,16 @@
+.EmoteButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  cursor: pointer;
+}
+
+.EmoteContainer {
+  position: absolute;
+  transform: translate3d(25%, -110%, 0);
+  right: 0;
+  z-index: 4;
+  overflow: hidden;
+}

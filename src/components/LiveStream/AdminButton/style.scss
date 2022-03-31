@@ -1,0 +1,35 @@
+@import "../../../style/media-query";
+
+$btn-size: 40px;
+
+.adminButton {
+  position: absolute;
+  bottom: 12.5%;
+  right: 7px;
+  width: $btn-size;
+  height: $btn-size;
+  border-radius: 100%;
+  background-color: var(--blueDark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  @media screen and (max-width: #{$phone-landscape-width}) {
+    bottom: 22.5%;
+  }
+
+}
+
+.icon {
+  margin-right: 12px;
+  color: var(--blue);
+}
+
+.item {
+  border-radius: 0px;
+
+  > div {
+    align-items: center;
+  }
+}

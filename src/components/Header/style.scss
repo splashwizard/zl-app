@@ -1,0 +1,61 @@
+@import "../../style/media-query";
+
+:global(.fullscreen) {
+
+  :local(.header) {
+    display: none !important;
+  }
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--headerHeight);
+  padding: 0;
+  background: white;
+  box-shadow: 0 0 5px rgba(41, 31, 31, .5);
+  z-index: 19;
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    padding-left: 18px;
+  }
+}
+
+div.searchWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  > div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+div.searchContainer {
+  padding: 0 8px;
+  width: unquote("min(calc(100vw - 200px), 290px)");
+  margin: 0 22px;
+
+  @media screen and (max-width: $phone-portrait-width) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
